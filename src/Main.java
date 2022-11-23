@@ -3,6 +3,7 @@ import listProducts.listProducts;
 import recipe.Recipe;
 import recipe.SetRecipe;
 
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -61,6 +62,15 @@ public class Main {
         setRecipe.addRecipe(vegetableVegetable);
 
         setRecipe.printSetRecipe();
+
+        IteratorInteger iteratorInteger = new IteratorInteger();
+
+        iteratorInteger.generationNumbers();
+        System.out.printf(String.valueOf(iteratorInteger));
+        System.out.println();
+
+        iteratorInteger.removeNumbers();
+        System.out.println(iteratorInteger);
 
 
 
