@@ -1,5 +1,7 @@
 import product.Product;
 import listProducts.listProducts;
+import recipe.Recipe;
+import recipe.SetRecipe;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -30,9 +32,35 @@ public class Main {
         listProducts.removeProduct(potato);
         listProducts.showInfo();
 
+        Recipe barbeque = new Recipe("Шашлык");
+        barbeque.addProductForRecipe(meat);
+        barbeque.addProductForRecipe(onion);
+
+        System.out.println(barbeque);
+
+        Recipe saladVegetable = new Recipe("Овощной салат");
+        saladVegetable.addProductForRecipe(cabbage);
+        saladVegetable.addProductForRecipe(carrot);
+        saladVegetable.addProductForRecipe(tomato);
+        saladVegetable.addProductForRecipe(onion);
+
+        System.out.println(saladVegetable);
+
+        Recipe vegetableVegetable = new Recipe("Овощной");
+        vegetableVegetable.addProductForRecipe(cabbage);
+        vegetableVegetable.addProductForRecipe(carrot);
+        vegetableVegetable.addProductForRecipe(tomato);
+        vegetableVegetable.addProductForRecipe(onion);
 
 
+        System.out.println(vegetableVegetable);
 
+        SetRecipe setRecipe = new SetRecipe();
+        setRecipe.addRecipe(barbeque);
+        setRecipe.addRecipe(saladVegetable);
+        setRecipe.addRecipe(vegetableVegetable);
+
+        setRecipe.printSetRecipe();
 
 
 

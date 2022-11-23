@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class listProducts {
-    public static Set<Product> set = new HashSet<>();
+    private Set<Product> set = new HashSet<>();
 
     public listProducts() {
     }
