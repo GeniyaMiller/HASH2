@@ -1,3 +1,4 @@
+import multiplicationTable.MultiplicationTable;
 import product.Product;
 import listProducts.listProducts;
 import recipe.Recipe;
@@ -71,6 +72,10 @@ public class Main {
 
         iteratorInteger.removeNumbers();
         System.out.println(iteratorInteger);
+
+        MultiplicationTable multiplicationTable = new MultiplicationTable();
+        multiplicationTable.addSetTasks();
+
 
 
 
