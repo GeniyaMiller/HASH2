@@ -5,6 +5,7 @@ import recipe.Recipe;
 import recipe.SetRecipe;
 
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -75,6 +76,34 @@ public class Main {
 
         MultiplicationTable multiplicationTable = new MultiplicationTable();
         multiplicationTable.addSetTasks();
+
+
+        System.out.println("ТЕЛЕФОННЫЙ СПРАВОЧНИК");
+        HashMap<String, String> telephoneDirectory = new HashMap<>();
+        telephoneDirectory.put("Кобзев И.В.", "84535224341");
+        telephoneDirectory.put("Юрьев А.З.", "84847543341");
+        telephoneDirectory.put("Алексеев И.И.", "84535298574");
+        telephoneDirectory.put("Храмов П.В.", "89558377462");
+        telephoneDirectory.put("Попов К.С.", "8995588447");
+        telephoneDirectory.put("ТетеревП.Р.", "89800799685");
+        telephoneDirectory.put("Титов Ф.В.", "87446366251");
+        telephoneDirectory.put("Павлова И.А.", "87226166352");
+        telephoneDirectory.put("Шмелева П.П.", "89005588473");
+        telephoneDirectory.put("Тиль А.А.", "89337726361");
+        telephoneDirectory.put("Иванова А.А.", "87668857473");
+        telephoneDirectory.put("Шахова М.М.", "89005500400");
+        telephoneDirectory.put("Стегалова П.А.", "84530004341");
+        telephoneDirectory.put("Хмель Р.В.", "88999999341");
+        telephoneDirectory.put("Катечкина О.", "89112233456");
+        telephoneDirectory.put("Чижова Р.Р.", "84535229999");
+        telephoneDirectory.put("Васечкина О.Ж.", "84535667788");
+        telephoneDirectory.put("Кобзева Й.У.", "84530778441");
+        telephoneDirectory.put("Попугаев Д.Д.", "85557744737");
+        telephoneDirectory.put("Катц П.П.", "84944837261");
+
+        System.out.println(telephoneDirectory.keySet());
+        System.out.println(telephoneDirectory.values());
+
 
 
 
