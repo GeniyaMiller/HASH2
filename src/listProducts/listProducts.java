@@ -2,41 +2,28 @@ package listProducts;
 
 import product.Product;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class listProducts {
-    private Set<Product> set = new HashSet<>();
+    private HashMap<String, Double> set = new HashMap<>();
 
     public listProducts() {
     }
 
 
     public void addProduct(Product product) {
-        if (!set.contains(product)) {
-            set.add(product);
-        } else {
-            throw new RuntimeException("Продукт " + product.getName()+ " в корзине!");
-        }
+        set.put(product.getName(), product.getQuantity());
     }
 
     public void removeProduct(Product product){
-        Iterator<Product> productIterator = this.set.iterator();
-        while (productIterator.hasNext()){
-            if(productIterator.next().getName().equals(product.getName())) {
-                productIterator.remove();
-                break;
-            }
-        }
+        set.remove(product.getName());
     }
 
     public void showInfo (){
         System.out.println("Список продуктов");
-        for (Product product:set) {
-            System.out.println(product.getName() + " " + product.getQuantity() + " кг, " + product.getPrice() + " руб.");
+        for (Map.Entry<String, Double> productEntry: set.entrySet()) {
+            System.out.println("Продукт " + productEntry.getKey() + ": " + productEntry.getValue());
         }
-
     }
 
 

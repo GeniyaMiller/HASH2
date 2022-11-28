@@ -49,7 +49,7 @@ public class Product {
         if(quantity > 0) {
             this.quantity = quantity;
         } else {
-            throw new RuntimeException("Заполните карточку товара полностью!");
+            this.quantity = 1;
         }
     }
 
